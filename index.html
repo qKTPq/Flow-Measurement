@@ -1,157 +1,204 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lecture on Flow Measurement</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-                background-color: #f9f9f9;
-                margin: 0;
-                padding: 20px;
-            }
-            h1, h2, h3 {
-                color: #2f855a;
-            }
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 10px;
-            }
-            h2 {
-                font-size: 1.5rem;
-                margin-top: 20px;
-                margin-bottom: 10px;
-            }
-            h3 {
-                font-size: 1.2rem;
-                margin-top: 15px;
-                margin-bottom: 8px;
-            }
-            p {
-                margin-bottom: 10px;
-            }
-            ul {
-                margin: 10px 0;
-                padding-left: 20px;
-            }
-            li {
-                margin-bottom: 5px;
-            }
-            .equation {
-                font-family: "Courier New", Courier, monospace;
-                background-color: #e6ffe6;
-                padding: 5px;
-                display: inline-block;
-                border-radius: 5px;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Lecture on Flow Measurement</h1>
+<html>
+<head>
+  <title>Flow Measurement Lecture</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-700 text-sm leading-relaxed p-4">
+  <!-- Header -->
+  <header class="mb-6">
+    <h1 class="text-xl text-green-700 font-semibold mb-2">Flow Measurement Lecture</h1>
+    <p class="text-xs text-green-600">A concise lecture on flow measurement principles and devices</p>
+  </header>
 
-        <h2>Introduction</h2>
-        <p>Flow measurement is a critical technique used in processes requiring the transport of materials, such as oil, water, or gases. It is essential for quantifying material supply, maintaining specific flow rates, and ensuring plant efficiency. An ideal flowmeter should be non-intrusive, inexpensive, accurate, and maintenance-free, though such a device does not yet exist. However, advancements in flow measurement systems have brought us closer to this ideal.</p>
+  <!-- Introduction -->
+  <section class="mb-6">
+    <h2 class="text-lg text-green-700 font-medium mb-2">INTRODUCTION</h2>
+    <p>
+      Flow measurement deals with quantifying the rate at which a fluid moves through a system.
+      Its applications include billing for supplied materials (e.g., fuel), ensuring efficient process
+      control, and maintaining the desired flow rates. Various devices and methods exist, each
+      designed to cater to different accuracy, repeatability, and cost requirements.
+    </p>
+  </section>
 
-        <h2>Basic Principles of Flow Measurement</h2>
-        <p>Flow can be measured as either a volumetric quantity or an instantaneous velocity, which is often translated into a flow rate. The relationship between flow rate, velocity, and area is expressed as:</p>
-        <p class="equation">Flow Rate = Velocity × Area</p>
+  <!-- Basic Principles of Flow Measurement -->
+  <section class="mb-6">
+    <h2 class="text-lg text-green-700 font-medium mb-2">BASIC PRINCIPLES OF FLOW MEASUREMENT</h2>
+    <p>
+      Flow can be measured as either a volumetric quantity or a flow rate (often derived from
+      velocity). Among other factors, fluid viscosity, density, and the internal geometry of pipes
+      play key roles in determining accurate flow readings.
+    </p>
 
-        <h3>Streamlined and Turbulent Flow</h3>
-        <p>Flow can be categorized as:</p>
-        <ul>
-            <li><strong>Streamlined (Laminar) Flow:</strong> Fluid particles move in parallel layers. This occurs at low velocities and is dependent on viscosity.</li>
-            <li><strong>Turbulent Flow:</strong> Fluid particles move chaotically, mixing with each other. This occurs at higher velocities.</li>
-        </ul>
-        <p>The transition between these flows is determined by the Reynolds number (Re):</p>
-        <p class="equation">Re = (D × v × ρ) / μ</p>
-        <p>Where:</p>
-        <ul>
-            <li><strong>D:</strong> Diameter of the pipe</li>
-            <li><strong>v:</strong> Velocity</li>
-            <li><strong>ρ:</strong> Density</li>
-            <li><strong>μ:</strong> Viscosity</li>
-        </ul>
-        <p>Laminar flow occurs when Re &lt; 2000, and turbulent flow occurs when Re &gt; 4000.</p>
+    <!-- Streamlined and Turbulent Flow -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Streamlined and Turbulent Flow</h3>
+    <p class="mb-2">
+      At low velocities, fluid flow is <strong>laminar</strong> or streamlined: particles move in parallel
+      lines with minimal mixing. Above a critical velocity, transverse components in fluid motion
+      increase, causing <strong>turbulent flow</strong>.
+    </p>
 
-        <h3>Flow Profile</h3>
-        <p>The velocity profile across a pipe varies:</p>
-        <ul>
-            <li><strong>Laminar Flow:</strong> Parabolic profile with maximum velocity at the center.</li>
-            <li><strong>Turbulent Flow:</strong> Flatter profile with velocity at the center approximately 1.2 times the mean velocity.</li>
-        </ul>
+    <!-- Reynolds Number Range -->
+    <p class="mb-2">
+      The parameter defining flow regime is the <em>Reynolds number (Re)</em>:
+    </p>
+    <p class="italic mb-2">
+      Re = ( D × v × ρ ) / μ
+    </p>
+    <ul class="list-disc ml-5 mb-2">
+      <li>If Re &lt; 2000, flow is <strong>laminar</strong>.</li>
+      <li>If Re &gt; 4000, flow is <strong>turbulent</strong>.</li>
+      <li>The zone 2000 &lt; Re &lt; 4000 is <strong>critical</strong> and may transition between laminar and turbulent.</li>
+    </ul>
 
-        <h3>Energy of a Fluid in Motion</h3>
-        <p>Energy in a moving fluid is represented as:</p>
-        <ul>
-            <li><strong>Potential Energy:</strong> Due to height above a reference point.</li>
-            <li><strong>Kinetic Energy:</strong> Due to velocity.</li>
-            <li><strong>Pressure Energy:</strong> Due to fluid pressure.</li>
-        </ul>
+    <!-- Flow Profile -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Flow Profile</h3>
+    <p class="mb-2">
+      The velocity of a fluid across a pipe’s cross-section can vary significantly. In <strong>laminar</strong> flow,
+      the profile is parabolic, whereas in <strong>turbulent</strong> flow under fully developed conditions, the
+      center velocity is about 1.2 times the mean velocity. Ensuring a fully developed flow profile
+      is critical for repeatable and accurate measurement.
+    </p>
 
-        <h3>Viscosity</h3>
-        <p>Viscosity is the frictional resistance in a flowing fluid. It affects flow profiles and suppresses disturbances caused by bends or valves in a pipe.</p>
+    <!-- Energy of a Fluid in Motion -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Energy of a Fluid in Motion</h3>
+    <p class="mb-2">
+      The energy components in any steady flow without friction can be expressed as:
+    </p>
+    <p class="italic mb-2">
+      Total Energy = Potential Energy + Kinetic Energy + Pressure Energy
+    </p>
+    <p class="mb-2">
+      Where each term relates to the fluid’s vertical position, velocity, and pressure respectively.
+      Commonly in flow equations:
+    </p>
+    <p class="italic mb-2">
+      E = Z × g + V<sup>2</sup> / (2 × g) + p / ρ
+    </p>
+    <ul class="list-disc ml-5 mb-2">
+      <li><strong>Z</strong> = height (elevation)</li>
+      <li><strong>g</strong> = gravitational acceleration</li>
+      <li><strong>V</strong> = velocity of the fluid</li>
+      <li><strong>p</strong> = pressure</li>
+      <li><strong>ρ</strong> = density of the fluid</li>
+    </ul>
 
-        <h3>Bernoulli’s Theorem</h3>
-        <p>Bernoulli’s theorem states that in steady, frictionless flow, the sum of potential, kinetic, and pressure energy is constant along a streamline:</p>
-        <p class="equation">Z + (V² / 2g) + (P / γ) = Constant</p>
-        <p>Where:</p>
-        <ul>
-            <li><strong>Z:</strong> Elevation head</li>
-            <li><strong>V:</strong> Velocity</li>
-            <li><strong>P:</strong> Pressure</li>
-            <li><strong>γ:</strong> Specific weight</li>
-        </ul>
+    <!-- Viscosity -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Viscosity</h3>
+    <p class="mb-2">
+      Viscosity is the internal friction in a fluid that resists flow. Higher viscosity dampens disturbances
+      and swirls, requiring longer straight runs to achieve reliable measurement conditions. For liquids,
+      viscosity typically decreases with increasing temperature; for gases, it usually increases with
+      temperature.
+    </p>
 
-        <h3>Modification of Flow Equations for Gases</h3>
-        <p>For compressible fluids, an expansibility factor (ε) is introduced to account for volume changes due to expansion:</p>
-        <p class="equation">Q = C × A × √(2gΔP / ρ) × ε</p>
+    <!-- Bernoulli’s Theorem -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Bernoulli’s Theorem</h3>
+    <p class="mb-2">
+      Bernoulli’s theorem states that the sum of potential, kinetic, and pressure energy along a
+      streamline (in steady, frictionless flow) is constant. The fundamental form of Bernoulli’s equation:
+    </p>
+    <p class="italic mb-2">
+      Z × g + (V<sup>2</sup> / 2g) + (p / ρ) = constant
+    </p>
+    <p>
+      Where each variable represents the components of fluid energy at any specific location
+      along the streamline.
+    </p>
 
-        <h2>Fluid Flow in Closed Pipes</h2>
-        <p>Various devices are used to measure fluid flow in closed pipes. Each has its advantages and disadvantages:</p>
+    <!-- Modification of Flow Equations from Bernoulli’s Theorem Apply to Gases -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Modification of Flow Equations for Gases</h3>
+    <p class="mb-2">
+      When gases compress or expand, Bernoulli’s equations are adjusted to include a factor
+      that corrects for changes in density. An expansibility factor (<em>ε</em>) accounts for volume
+      change due to compression or expansion:
+    </p>
+    <p class="mb-2 italic">
+      Q = f(ε) × [Bernoulli-based terms]
+    </p>
+    <p>
+      <em>ε</em> is unity (1) for incompressible fluids but drops slightly below 1 for real gases.
+    </p>
+  </section>
 
-        <h3>Differential-Pressure Devices</h3>
-        <ul>
-            <li><strong>Advantages:</strong> Simple, reliable, and widely used.</li>
-            <li><strong>Disadvantages:</strong> High pressure loss, critical installation requirements.</li>
-        </ul>
+  <!-- Fluid Flow in Closed Pipes -->
+  <section class="mb-6">
+    <h2 class="text-lg text-green-700 font-medium mb-2">FLUID FLOW IN CLOSED PIPES</h2>
+    <p class="mb-2">
+      In closed conduits (e.g., pipes) transporting liquids or gases under pressure, numerous
+      techniques exist to measure flow. Each has unique benefits and constraints.
+    </p>
 
-        <h3>Orifice Plate</h3>
-        <ul>
-            <li><strong>Advantages:</strong> Simple, inexpensive, no moving parts.</li>
-            <li><strong>Disadvantages:</strong> High pressure loss, poor turndown ratio.</li>
-        </ul>
+    <!-- Differential-Pressure Devices -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Differential-Pressure Devices</h3>
+    <ul class="list-disc ml-5 mb-2">
+      <li>
+        <strong>Principle:</strong> A constriction causes a pressure drop proportional to flow rate.
+      </li>
+      <li>
+        <strong>Examples:</strong> Orifice plates, venturi tubes, nozzles, and more.
+      </li>
+      <li>
+        <strong>Pros:</strong> Mature technology, widely used, cost-effective for many applications.
+      </li>
+      <li>
+        <strong>Cons:</strong> Creates permanent pressure loss, requires accurate calculation or calibration,
+        and limited rangeability.
+      </li>
+    </ul>
 
-        <h3>Venturi Tube</h3>
-        <ul>
-            <li><strong>Advantages:</strong> Low pressure loss, high accuracy.</li>
-            <li><strong>Disadvantages:</strong> Expensive, bulky.</li>
-        </ul>
+    <!-- Orifice Plate -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Orifice Plate</h3>
+    <ul class="list-disc ml-5 mb-2">
+      <li><strong>Principle:</strong> A thin plate with a precisely machined hole creates differential pressure.</li>
+      <li><strong>Pros:</strong> Simple design and installation, inexpensive, reliable.</li>
+      <li><strong>Cons:</strong> High permanent pressure loss; sensitive to wear or damage around the orifice.</li>
+    </ul>
 
-        <h3>Rotameter</h3>
-        <ul>
-            <li><strong>Advantages:</strong> Simple, visual indication of flow.</li>
-            <li><strong>Disadvantages:</strong> Limited to low-pressure systems, requires vertical installation.</li>
-        </ul>
+    <!-- Venturi Tube -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Venturi Tube</h3>
+    <ul class="list-disc ml-5 mb-2">
+      <li><strong>Principle:</strong> Gradual constriction and expansion create a measurable pressure drop.</li>
+      <li><strong>Pros:</strong> Low permanent pressure drop, reliable for large flows, often used in water & wastewater.</li>
+      <li><strong>Cons:</strong> More expensive and bulkier than an orifice plate; installation space required.</li>
+    </ul>
 
-        <h3>Pitot Tube</h3>
-        <ul>
-            <li><strong>Advantages:</strong> Simple, inexpensive.</li>
-            <li><strong>Disadvantages:</strong> Intrusive, less accurate for turbulent flows.</li>
-        </ul>
+    <!-- Rotameter -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Rotameter</h3>
+    <ul class="list-disc ml-5 mb-2">
+      <li><strong>Principle:</strong> Fluid flow lifts a float within a tapered tube, where height corresponds to flow rate.</li>
+      <li><strong>Pros:</strong> Simple design, direct reading, good for low flow rates.</li>
+      <li><strong>Cons:</strong> Limited to vertical orientation, must be transparent, works primarily for clean fluids.</li>
+    </ul>
 
-        <h3>Ultrasonic Flowmeter</h3>
-        <ul>
-            <li><strong>Advantages:</strong> Non-intrusive, suitable for dirty or corrosive fluids.</li>
-            <li><strong>Disadvantages:</strong> Expensive, requires specific installation conditions.</li>
-        </ul>
+    <!-- Pitot Tube -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Pitot Tube</h3>
+    <ul class="list-disc ml-5 mb-2">
+      <li><strong>Principle:</strong> Measures impact and static pressures to determine fluid velocity.</li>
+      <li><strong>Pros:</strong> Economical, minimal flow obstruction, useful for velocity profiling.</li>
+      <li><strong>Cons:</strong> Not ideal for very low or high flow rates; accuracy depends on alignment and calibration.</li>
+    </ul>
 
-        <h3>Magnetic Flowmeter</h3>
-        <ul>
-            <li><strong>Advantages:</strong> Accurate, unaffected by temperature or pressure changes.</li>
-            <li><strong>Disadvantages:</strong> Limited to conductive fluids, expensive.</li>
-        </ul>
-    </body>
-    </html>
+    <!-- Ultrasonic Flow Meter -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Ultrasonic Flow Meter</h3>
+    <ul class="list-disc ml-5 mb-2">
+      <li><strong>Principle:</strong> Uses the transit time or Doppler shift of ultrasound signals through the fluid to measure velocity.</li>
+      <li><strong>Pros:</strong> Non-intrusive, low maintenance, can work for various fluids without major pressure loss.</li>
+      <li><strong>Cons:</strong> Accuracy can be affected by pipe scale, very high turndown ratio can be challenging, requires good fluid acoustics.</li>
+    </ul>
+
+    <!-- Magnetic Flow Meter -->
+    <h3 class="text-md text-green-700 font-semibold mt-4 mb-2">Magnetic Flow Meter</h3>
+    <ul class="list-disc ml-5 mb-2">
+      <li><strong>Principle:</strong> Flowing conductive fluids generate a voltage across a magnetic field; the voltage is proportional to flow.</li>
+      <li><strong>Pros:</strong> No moving parts, minimal pressure drop, excellent for slurries & corrosive fluids.</li>
+      <li><strong>Cons:</strong> Only works with conductive fluids; more expensive than some alternatives.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-6 pt-4 text-xs text-green-700 border-t border-green-200">
+    <p>© 2025 Flow Measurement Lecture. All rights reserved.</p>
+  </footer>
+</body>
+</html>
