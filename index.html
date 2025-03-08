@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lecture on Flow Measurement</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: #f9f9f9;
+                margin: 0;
+                padding: 20px;
+            }
+            h1, h2, h3 {
+                color: #2f855a;
+            }
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            h2 {
+                font-size: 1.5rem;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            h3 {
+                font-size: 1.2rem;
+                margin-top: 15px;
+                margin-bottom: 8px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+            ul {
+                margin: 10px 0;
+                padding-left: 20px;
+            }
+            li {
+                margin-bottom: 5px;
+            }
+            .equation {
+                font-family: "Courier New", Courier, monospace;
+                background-color: #e6ffe6;
+                padding: 5px;
+                display: inline-block;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Lecture on Flow Measurement</h1>
+
+        <h2>Introduction</h2>
+        <p>Flow measurement is a critical technique used in processes requiring the transport of materials, such as oil, water, or gases. It is essential for quantifying material supply, maintaining specific flow rates, and ensuring plant efficiency. An ideal flowmeter should be non-intrusive, inexpensive, accurate, and maintenance-free, though such a device does not yet exist. However, advancements in flow measurement systems have brought us closer to this ideal.</p>
+
+        <h2>Basic Principles of Flow Measurement</h2>
+        <p>Flow can be measured as either a volumetric quantity or an instantaneous velocity, which is often translated into a flow rate. The relationship between flow rate, velocity, and area is expressed as:</p>
+        <p class="equation">Flow Rate = Velocity × Area</p>
+
+        <h3>Streamlined and Turbulent Flow</h3>
+        <p>Flow can be categorized as:</p>
+        <ul>
+            <li><strong>Streamlined (Laminar) Flow:</strong> Fluid particles move in parallel layers. This occurs at low velocities and is dependent on viscosity.</li>
+            <li><strong>Turbulent Flow:</strong> Fluid particles move chaotically, mixing with each other. This occurs at higher velocities.</li>
+        </ul>
+        <p>The transition between these flows is determined by the Reynolds number (Re):</p>
+        <p class="equation">Re = (D × v × ρ) / μ</p>
+        <p>Where:</p>
+        <ul>
+            <li><strong>D:</strong> Diameter of the pipe</li>
+            <li><strong>v:</strong> Velocity</li>
+            <li><strong>ρ:</strong> Density</li>
+            <li><strong>μ:</strong> Viscosity</li>
+        </ul>
+        <p>Laminar flow occurs when Re &lt; 2000, and turbulent flow occurs when Re &gt; 4000.</p>
+
+        <h3>Flow Profile</h3>
+        <p>The velocity profile across a pipe varies:</p>
+        <ul>
+            <li><strong>Laminar Flow:</strong> Parabolic profile with maximum velocity at the center.</li>
+            <li><strong>Turbulent Flow:</strong> Flatter profile with velocity at the center approximately 1.2 times the mean velocity.</li>
+        </ul>
+
+        <h3>Energy of a Fluid in Motion</h3>
+        <p>Energy in a moving fluid is represented as:</p>
+        <ul>
+            <li><strong>Potential Energy:</strong> Due to height above a reference point.</li>
+            <li><strong>Kinetic Energy:</strong> Due to velocity.</li>
+            <li><strong>Pressure Energy:</strong> Due to fluid pressure.</li>
+        </ul>
+
+        <h3>Viscosity</h3>
+        <p>Viscosity is the frictional resistance in a flowing fluid. It affects flow profiles and suppresses disturbances caused by bends or valves in a pipe.</p>
+
+        <h3>Bernoulli’s Theorem</h3>
+        <p>Bernoulli’s theorem states that in steady, frictionless flow, the sum of potential, kinetic, and pressure energy is constant along a streamline:</p>
+        <p class="equation">Z + (V² / 2g) + (P / γ) = Constant</p>
+        <p>Where:</p>
+        <ul>
+            <li><strong>Z:</strong> Elevation head</li>
+            <li><strong>V:</strong> Velocity</li>
+            <li><strong>P:</strong> Pressure</li>
+            <li><strong>γ:</strong> Specific weight</li>
+        </ul>
+
+        <h3>Modification of Flow Equations for Gases</h3>
+        <p>For compressible fluids, an expansibility factor (ε) is introduced to account for volume changes due to expansion:</p>
+        <p class="equation">Q = C × A × √(2gΔP / ρ) × ε</p>
+
+        <h2>Fluid Flow in Closed Pipes</h2>
+        <p>Various devices are used to measure fluid flow in closed pipes. Each has its advantages and disadvantages:</p>
+
+        <h3>Differential-Pressure Devices</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Simple, reliable, and widely used.</li>
+            <li><strong>Disadvantages:</strong> High pressure loss, critical installation requirements.</li>
+        </ul>
+
+        <h3>Orifice Plate</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Simple, inexpensive, no moving parts.</li>
+            <li><strong>Disadvantages:</strong> High pressure loss, poor turndown ratio.</li>
+        </ul>
+
+        <h3>Venturi Tube</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Low pressure loss, high accuracy.</li>
+            <li><strong>Disadvantages:</strong> Expensive, bulky.</li>
+        </ul>
+
+        <h3>Rotameter</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Simple, visual indication of flow.</li>
+            <li><strong>Disadvantages:</strong> Limited to low-pressure systems, requires vertical installation.</li>
+        </ul>
+
+        <h3>Pitot Tube</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Simple, inexpensive.</li>
+            <li><strong>Disadvantages:</strong> Intrusive, less accurate for turbulent flows.</li>
+        </ul>
+
+        <h3>Ultrasonic Flowmeter</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Non-intrusive, suitable for dirty or corrosive fluids.</li>
+            <li><strong>Disadvantages:</strong> Expensive, requires specific installation conditions.</li>
+        </ul>
+
+        <h3>Magnetic Flowmeter</h3>
+        <ul>
+            <li><strong>Advantages:</strong> Accurate, unaffected by temperature or pressure changes.</li>
+            <li><strong>Disadvantages:</strong> Limited to conductive fluids, expensive.</li>
+        </ul>
+    </body>
+    </html>
